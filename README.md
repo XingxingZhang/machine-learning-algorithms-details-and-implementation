@@ -1,9 +1,9 @@
 
 Original project http://code.google.com/p/machine-learning-algorithms-details-and-implementation <br>
-Google is shutting down Google code, so I have to move it here MANUALLY (Yes, Google code's Automatical exporting didn't work for my project). <br>
+Google is shutting down Google code, so I have to move it here MANUALLY (Yes, Google code's Automatical exporting doesn't work for my project). <br>
 
 It's a project created by me on April 2012. Well, I wrote these models for fun! Please note that the original license was GPL and now it is LGPL. <br>
-I am trying to make the following descriptions as the same as [here](http://code.google.com/p/machine-learning-algorithms-details-and-implementation)
+I am trying to make the following descriptions the same as [here](http://code.google.com/p/machine-learning-algorithms-details-and-implementation)
 
 # machine-learning-algorithms-details-and-implementation
 We will discuss principles of some popular machine learning algorithms in more detailed ways than most text books. In many text books or papers, the principle of a model is discussed but not detailed enough for implementation. Besides, some derivations are ignored. We want to eliminate all the confusion. In addition, we will implement some algorithms.

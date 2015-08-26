@@ -1,0 +1,27 @@
+================================================
+     Support Vector Machines Implementation
+================================================
+
+This is an implementation of svm, and I employed the algorithm in [1] to
+solve the following optimization problem:
+------------------------------------------------
+min 0.5*alpha^T * Q * alpha - e^T * alpha
+s.t. 
+     0 <= alpha[i] <= C     i = 1,...,m
+     y^T * alpha = 0
+------------------------------------------------
+The algorithm is a combination of SMO[2] and SVM-light[3] and it is very 
+simple, graceful:) and efficient.
+
+1. What's in this package?
+  - src: the source code
+  - bin: the executable binary
+  - doc: svm reading list and the developers munual
+  - app: an gender detector which can detect the gender of an Chinese name
+
+2. Enviroment
+  The code is written in C++ under Windows Cygwin.
+
+[1] Chih-Chung Chang and Chih-Jen Lin. LIBSVM: Introduction and Benchmarks
+[2] John C. Platt. Sequential Minimal Optimization: A Fast Algorithm for Training Support Vector Machines
+[3] Thorsten Joachims. Making Large-Scale SVM Learning Practical

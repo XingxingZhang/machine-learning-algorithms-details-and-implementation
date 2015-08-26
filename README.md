@@ -2,7 +2,7 @@
 Original project http://code.google.com/p/machine-learning-algorithms-details-and-implementation <br>
 Google is shutting down Google code, so I have to move it here MANUALLY (Yes, Google code's Automatical exporting didn't work for my project). <br>
 
-It's a project created by me on April 2012. Well, I wrote these models for fun! <br>
+It's a project created by me on April 2012. Well, I wrote these models for fun! Please note that the original license was GPL and now it is LGPL. <br>
 I am trying to make the following descriptions as the same as [here](http://code.google.com/p/machine-learning-algorithms-details-and-implementation)
 
 # machine-learning-algorithms-details-and-implementation

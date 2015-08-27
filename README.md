@@ -12,7 +12,7 @@ We will discuss principles of some popular machine learning algorithms in more d
 First of all, I do not intend to create an efficient or easy-to-use machine learning toolkit. In fact, I just want to check if I understand all the details of a specific algorithm. Furthermore, during the implementation, I found that compared to the derivation of an algorithm, the implementation is rather simple (e.g. LDA, the main part of the algorithm is less than 100 lines of code). Therefore, if you think implementing a machine learning algorithm is pretty cool, I just want to tell you "focus on the principles!"
 
 ## 1. Support Vector Machines
-The reason why I want to implement svm can be found [here](http://fantasyorg.blog.163.com/blog/static/109276109201232893256743/). svm-1.0 is an implementation of svm, and I employed the algorithm in [1] to solve the following optimization problem:
+The reason why I want to implement svm can be found [here](http://fantasyorg.blog.163.com/blog/static/109276109201232893256743/). [svm-1.0](https://github.com/XingxingZhang/machine-learning-algorithms-details-and-implementation/tree/master/svm-1.0) is an implementation of svm, and I employed the algorithm in [1] to solve the following optimization problem:
 ```
 min 0.5 * alpha^T * Q * alpha - e^T * alpha
 s.t. 
@@ -32,19 +32,19 @@ app: an gender detector which can detect the gender of an Chinese name
 The code is written in C++ under Windows Cygwin, so it can also run on Linux and Mac OS X.
 
 ## 2. Maximum Entropy Models
-maxent-1.0 is an implementation of Maximum Entropy Models[4]. I employed GIS (Generative Iterative Scaling) and exponential prior[5]. Well, GIS is a kind of slow, and in version 2.0, I will add IIS, L-BFGS and other faster algorithms.
+[maxent-1.0](https://github.com/XingxingZhang/machine-learning-algorithms-details-and-implementation/tree/master/maxent-1.0) is an implementation of Maximum Entropy Models[4]. I employed GIS (Generative Iterative Scaling) and exponential prior[5]. Well, GIS is a kind of slow, and in version 2.0, I will add IIS, L-BFGS and other faster algorithms.
 
 Well, precisely, maxent-1.0 is an implementation of logistic regression. Maximum Entropy Modeling is a methodology, and in fact Maximum Entropy Modeling is also used in CRF.
 
 There are many tutorials about Maximum Entropy Models. I think these two ([6],[7]) are enough to understand the model. Personally, I strongly recommend [7] (although this paper mainly discuss the principles of CRF, the MEM part is extraordinarily clear).
 
 ## 3. Latent Dirichlet Allocation
-lda-1.0 is an implementation of Latent Dirichlet Allocation[8]. The parameters are estimated via Gibbs Sampling. Admittedly, Gibbs Sampling is cool and easy to implement. However, it is soooooooo slow!!! In order to get an accurate estimation, you must sample as many times as possible (e.g. 2000) and it will take a lot of time especially for some large corpus.
+[lda-1.0](https://github.com/XingxingZhang/machine-learning-algorithms-details-and-implementation/tree/master/lda-1.0) is an implementation of Latent Dirichlet Allocation[8]. The parameters are estimated via Gibbs Sampling. Admittedly, Gibbs Sampling is cool and easy to implement. However, it is soooooooo slow!!! In order to get an accurate estimation, you must sample as many times as possible (e.g. 2000) and it will take a lot of time especially for some large corpus.
 
 If you want to understand LDA (I mean Gibbs-sampling-based LDA), you should know what is Gibbs sampling. Fortunately, [10] is a great tutorial of Gibbs sampling and prior math knowledge is not required. After finishing [10], you can start [9], and I think it will not take you long to master LDA, if you really understand the details in [10].
 
 A Tiny Implementation Issue
-Actually, my implementation is a little faster than gibbslda++0.2(their latest version). Mine takes 25m39.606s on "trndocs.dat" (which is contained in GibbsLDA++0.2.tar.gz) with default model parameters, and theirs takes 27m31.397s. The experiment was conducted on a 2G laptop with a Mac operating system.
+Actually, my implementation is a little faster than [gibbslda++0.2](http://gibbslda.sourceforge.net/)(their latest version). Mine takes 25m39.606s on "trndocs.dat" (which is contained in GibbsLDA++0.2.tar.gz) with default model parameters, and theirs takes 27m31.397s. The experiment was conducted on a 2G laptop with a Mac operating system.
 
 During the estimation, we will compute p(z_j=k|z_-j,w) k = 1, ..., K and sample z_j according to the probability distribution. They did it this way:
 ```
